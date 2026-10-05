@@ -118,11 +118,11 @@ renderCart();
    if(/(music|song|sound|playing)/.test(t)){bot("Music is part of the M Bakeri entrance on purpose. Chris came from live entertainment, so the site treats the arrival like part of the show. Use the ♪ control in the header any time.");return}
    if(/(cater|catering|office|event|party|wedding|group)/.test(t)){bot("I can help start a catering request for breakfast, pastry, lunch or a celebration. The full demo inquiry is ready on the catering page.",[{l:'Plan catering',a:'catering'},{l:'Celebration cake',a:'cakes'}]);return}
    if(/(cake|birthday|anniversary|celebration|custom cake)/.test(t)&&!p){bot("For the most M Bakeri choice, start with the <b>Earl Grey Tea Cake with Parisian-style buttercream</b>. Custom cakes deserve their own conversation, so I can take you to the cake studio.",[{l:'Explore custom cakes',a:'cakes'},{l:'Add Earl Grey cake',a:'add:earlgrey'}]);return}
-   if(/(europe|european|french|paris|signature|statement)/.test(t)){recommend([byId.lorraine,byId.pistachio,byId.earlgrey],'If you want the European side of M Bakeri, I’d start here:');return}
+   if(/(europe|european|french|paris|signature|statement)/.test(t)){recommend([byId.lorraine,byId.pistachio,byId.earlgrey],'For the most European side of Chris’s collection, start here:');return}
    if(/(coffee|latte|cappuccino|espresso|caffeine|drink)/.test(t)&&!p){recommend([byId.cappuccino,byId.latte,byId.coldbrew],'For coffee, these fit the bakery best:');return}
    if(/(sweet|dessert|pastry|treat|chocolate|croissant)/.test(t)&&!p){recommend([byId.pistachio,byId.berry,byId.brownie],'Something sweet? These are a good introduction to the case:');return}
    if(/(savory|savoury|lunch|breakfast|hungry|quiche|meal)/.test(t)&&!p){recommend([byId.lorraine,byId.medquiche,byId.wrap],'For something savory:');return}
-   if(/(popular|favorite|favourite|best|recommend|suggest|surprise|what should)/.test(t)){recommend([byId.pistachio,byId.lorraine,byId.earlgrey],'If I were introducing someone to M Bakeri for the first time:');return}
+   if(/(popular|favorite|favourite|best|recommend|suggest|surprise|what should)/.test(t)){recommend([byId.pistachio,byId.lorraine,byId.earlgrey],'From Chris’s current edit, I’d start here:');return}
    if(/(deliver|delivery|ship|shipping|doordash|uber)/.test(t)){bot("This concept is set up around <b>pickup ordering</b>. Delivery can be integrated later if the bakery chooses a delivery provider.",[{l:'Order for pickup',a:'order'}]);return}
    if(/(pickup|pick up|ready|how long)/.test(t)){bot("The production version can show real preparation times and available pickup slots. In this demo, ordering is presented as pickup-first.",[{l:'Start an order',a:'order'}]);return}
    if(/(hi|hello|hey|bonjour|good morning|good afternoon)/.test(t)){bot("Bonjour. Tell me what mood you’re in — <b>European pastry, savory, coffee, or celebration?</b>",[{l:'European pastry',a:'european'},{l:'Savory',a:'savory'},{l:'Coffee',a:'coffee'}]);return}
@@ -134,7 +134,7 @@ renderCart();
    document.getElementById('milaChat')?.classList.add('open');
    document.getElementById('milaLaunch').style.display='none';
    document.getElementById('milaTeaser')?.classList.remove('show');
-   if(!greeted){greeted=true;bot("Bonjour, I’m <b>Mila</b>, your M Bakeri concierge. I can help you find something that feels very <i>M Bakeri</i> — or simply get coffee into your order.",[{l:"Chris's picks",a:'popular'},{l:'European pastry',a:'european'},{l:'I need coffee',a:'coffee'}]);}
+   if(!greeted){greeted=true;bot("Bonjour, I’m <b>Mila</b>, your M Bakeri concierge. I know <b>Chris’s Edit</b> and can guide you through the collection the way a stylist would: signature pastry, savory, coffee, cakes, or a pairing.",[{l:"Chris's picks",a:'popular'},{l:'European pastry',a:'european'},{l:'I need coffee',a:'coffee'}]);}
    setTimeout(()=>document.getElementById('milaInput')?.focus(),80);
  }
  function closeMila(){document.getElementById('milaChat')?.classList.remove('open');document.getElementById('milaLaunch').style.display='flex'}
